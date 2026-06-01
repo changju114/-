@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>제주부동산나라공인중개사 | 대표 강창주</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    :root {
+      --orange: #F4813F;
+      --orange-light: #FFA468;
+      --orange-dark: #D0622A;
+      --dark: #2C2C2A;
+      --dark-mid: #3E3E3B;
+      --dark-soft: #5A5A56;
+      --cream: #FBF8F4;
+      --white: #FFFFFF;
+      --border: rgba(44,44,42,0.1);
+      --shadow: 0 4px 24px rgba(44,44,42,0.12);
+      --shadow-lg: 0 12px 48px rgba(44,44,42,0.2);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      max-width: 390px;
+      margin: 0 auto;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 24px 100px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, #2d4a3e 0%, #1a2f28 40%, #0d1f1a 100%);
+      filter: brightness(1);
+      transform: scale(1.05);
+      animation: heroZoom 14s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to   { transform: scale(1.12); }
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(170deg, rgba(44,44,42,0.1) 0%, rgba(44,44,42,0.75) 65%, rgba(44,44,42,0.92) 100%);
+    }
+    .hero-tag {
+      position: relative;
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 12px; border-radius: 40px;
+      margin-bottom: 18px; width: fit-content;
+    }
+    .hero-tag i { font-size: 10px; }
+    .hero h1 {
+      position: relative;
+      font-family: 'Noto Serif KR', serif;
+      font-size: 32px; font-weight: 900;
+      color: var(--white); line-height: 1.35;
+      margin-bottom: 14px; letter-spacing: -0.5px;
+    }
+    .hero h1 em { font-style: normal; color: var(--orange-light); }
+    .hero p {
+      position: relative;
+      font-size: 15px; color: rgba(255,255,255,0.85);
+      line-height: 1.6; margin-bottom: 28px; font-weight: 500;
+    }
+    .hero-cta { position: relative; display: flex; gap: 10px; }
+    .btn-primary {
+      flex: 1;
+      background: var(--orange); color: #fff;
+      border: none; border-radius: 12px;
+      padding: 15px 0; font-size: 15px; font-weight: 700;
+      font-family: 'Noto Sans KR', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(244,129,63,0.5);
+      transition: transform .15s, box-shadow .15s;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      text-decoration: none;
+    }
+    .btn-primary:active { transform: scale(.97); }
+    .btn-outline {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      color: #fff; border: 1.5px solid rgba(255,255,255,0.5);
+      border-radius: 12px; padding: 15px 18px;
+      font-size: 14px; font-weight: 500;
+      font-family: 'Noto Sans KR', sans-serif;
+      cursor: pointer; transition: background .15s;
+      display: flex; align-items: center; gap: 7px;
+    }
+    .btn-outline:active { background: rgba(255,255,255,0.25); }
+    .hero-scroll {
+      position: absolute; bottom: 28px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      color: rgba(255,255,255,0.5); font-size: 10px; letter-spacing: 1px;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    .hero-scroll i { font-size: 16px; }
+    @keyframes bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── SECTION COMMON ── */
+    .section { padding: 52px 20px 0; }
+    .section-head { margin-bottom: 28px; }
+    .section-eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; color: var(--orange);
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .section-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 24px; font-weight: 900;
+      line-height: 1.35; color: var(--dark);
+    }
+    .section-title em { font-style: normal; color: var(--orange); }
+
+    /* ── LISTINGS ── */
+    .listings-wrap { padding: 52px 0 0; }
+    .listings-head {
+      padding: 0 20px 20px;
+      display: flex; align-items: flex-end; justify-content: space-between;
+    }
+    .listings-head-left {}
+    .listings-title-row {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .listings-title-row .section-title { white-space: nowrap; }
+
+    /* 매물 탭 필터 */
+    .listing-tabs {
+      display: flex; gap: 6px;
+      padding: 0 20px 16px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .listing-tabs::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      flex-shrink: 0;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 30px;
+      padding: 7px 14px;
+      font-size: 12px; font-weight: 700;
+      color: var(--dark-soft);
+      font-family: 'Noto Sans KR', sans-serif;
+      cursor: pointer; transition: all .15s;
+    }
+    .tab-btn.active {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+    }
+
+    .swiper { padding: 0 20px 32px !important; overflow: visible !important; }
+    .swiper-slide { width: 280px !important; }
+    .card {
+      background: var(--white); border-radius: 18px;
+      overflow: hidden; box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s;
+      position: relative;
+    }
+    .card:active { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+
+    /* 카드 편집 버튼 */
+    .card-edit-bar {
+      position: absolute; top: 10px; right: 10px;
+      display: flex; gap: 5px; z-index: 10;
+    }
+    .card-edit-btn {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px;
+      backdrop-filter: blur(6px);
+      transition: transform .15s;
+    }
+    .card-edit-btn:active { transform: scale(.9); }
+    .btn-edit { background: rgba(255,255,255,0.9); color: var(--dark); }
+    .btn-delete { background: rgba(220,50,50,0.85); color: #fff; }
+
+    .card-thumb {
+      position: relative; height: 180px; overflow: hidden;
+    }
+    .card-thumb img {
+      width: 100%; height: 100%; object-fit: cover; transition: transform .4s;
+    }
+    .card:active .card-thumb img { transform: scale(1.04); }
+    .card-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: var(--dark); color: #fff;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.5px;
+      padding: 4px 10px; border-radius: 20px;
+    }
+    .card-badge.land { background: #3B7A57; }
+    .card-badge.house { background: #4A5FA8; }
+    .card-badge.apt { background: #7B5EA7; }
+    .card-badge.commercial { background: var(--orange-dark); }
+    .card-body { padding: 16px; }
+    .card-loc {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 12px; color: var(--dark-soft); margin-bottom: 6px;
+    }
+    .card-loc i { color: var(--orange); font-size: 11px; }
+    .card-name {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 10px;
+    }
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+    .tag {
+      background: var(--cream); border: 1px solid var(--border);
+      font-size: 11px; color: var(--dark-soft);
+      padding: 3px 9px; border-radius: 20px;
+    }
+    .card-price {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 19px; font-weight: 900; color: var(--orange); margin-bottom: 14px;
+    }
+    .card-price small { font-size: 12px; font-weight: 400; color: var(--dark-soft); font-family: 'Noto Sans KR', sans-serif; }
+    .card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      background: var(--cream); border: 1.5px solid var(--border);
+      border-radius: 10px; padding: 11px 0;
+      font-size: 13px; font-weight: 700; color: var(--dark);
+      cursor: pointer; transition: background .15s, border-color .15s; width: 100%;
+    }
+    .card-btn:active { background: var(--orange); border-color: var(--orange); color: #fff; }
+    .swiper-pagination-bullet { background: var(--dark-soft) !important; }
+    .swiper-pagination-bullet-active { background: var(--orange) !important; }
+
+    /* ── VIDEO ── */
+    .video-wrap { padding: 52px 20px 0; position: relative; }
+    .video-section-head {
+      display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px;
+    }
+    .video-edit-btns { display: flex; gap: 6px; margin-top: 4px; }
+    .icon-btn {
+      width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--border);
+      background: var(--white); display: flex; align-items: center; justify-content: center;
+      font-size: 13px; color: var(--dark-soft); cursor: pointer; transition: all .15s;
+    }
+    .icon-btn.del { border-color: #e53e3e; color: #e53e3e; }
+    .icon-btn:active { transform: scale(.9); }
+    .video-frame {
+      position: relative; width: 100%; padding-top: 56.25%;
+      border-radius: 18px; overflow: hidden;
+      background: var(--dark); box-shadow: var(--shadow-lg);
+    }
+    .video-frame iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    }
+    .video-placeholder {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 10px; color: rgba(255,255,255,0.5);
+      font-size: 13px;
+    }
+    .video-placeholder i { font-size: 36px; color: var(--orange); }
+    .video-cap { margin-top: 14px; font-size: 13px; color: var(--dark-soft); display: flex; align-items: center; gap: 6px; }
+    .video-cap i { color: var(--orange); }
+
+    /* 영상 URL 입력 모달 */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6); z-index: 2000;
+      align-items: flex-end; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: var(--white); border-radius: 22px 22px 0 0;
+      padding: 28px 22px 40px; width: 100%; max-width: 390px;
+    }
+    .modal-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px; font-weight: 900; margin-bottom: 6px;
+    }
+    .modal-sub { font-size: 12px; color: var(--dark-soft); margin-bottom: 18px; }
+    .modal-input {
+      width: 100%; background: var(--cream);
+      border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 13px 14px; font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif; color: var(--dark);
+      outline: none; margin-bottom: 14px;
+    }
+    .modal-input:focus { border-color: var(--orange); }
+    .modal-btns { display: flex; gap: 10px; }
+    .modal-cancel {
+      flex: 1; background: var(--cream); border: 1.5px solid var(--border);
+      border-radius: 12px; padding: 13px 0;
+      font-size: 14px; font-weight: 700; color: var(--dark-soft);
+      font-family: 'Noto Sans KR', sans-serif; cursor: pointer;
+    }
+    .modal-confirm {
+      flex: 2; background: var(--orange); border: none;
+      border-radius: 12px; padding: 13px 0;
+      font-size: 14px; font-weight: 700; color: #fff;
+      font-family: 'Noto Sans KR', sans-serif; cursor: pointer;
+    }
+
+    /* 카드 편집 모달 */
+    .card-modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6); z-index: 2000;
+      align-items: flex-end; justify-content: center;
+    }
+    .card-modal-overlay.open { display: flex; }
+    .card-modal-box {
+      background: var(--white); border-radius: 22px 22px 0 0;
+      padding: 28px 22px 40px; width: 100%; max-width: 390px;
+      max-height: 85vh; overflow-y: auto;
+    }
+    .cmi { margin-bottom: 12px; }
+    .cmi label { font-size: 12px; font-weight: 700; color: var(--dark-soft); display: block; margin-bottom: 5px; }
+    .cmi input, .cmi select {
+      width: 100%; background: var(--cream);
+      border: 1.5px solid var(--border); border-radius: 10px;
+      padding: 11px 13px; font-size: 13px;
+      font-family: 'Noto Sans KR', sans-serif; color: var(--dark); outline: none;
+    }
+    .cmi input:focus, .cmi select:focus { border-color: var(--orange); }
+
+    /* ── FORM ── */
+    .form-wrap { padding: 52px 20px 0; }
+    .form-box {
+      background: var(--white); border-radius: 22px;
+      padding: 28px 22px; box-shadow: var(--shadow);
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-label { font-size: 12px; font-weight: 700; color: var(--dark-soft); margin-bottom: 6px; display: block; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; background: var(--cream);
+      border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 13px 14px; font-size: 14px;
+      font-family: 'Noto Sans KR', sans-serif; color: var(--dark);
+      outline: none; transition: border-color .2s;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--orange); background: var(--white);
+    }
+    .form-textarea { height: 90px; resize: none; }
+    .form-types { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; }
+    .type-btn {
+      background: var(--cream); border: 1.5px solid var(--border);
+      border-radius: 10px; padding: 10px 4px;
+      font-size: 11px; font-weight: 700; color: var(--dark-soft);
+      font-family: 'Noto Sans KR', sans-serif;
+      cursor: pointer; text-align: center; transition: all .15s;
+    }
+    .type-btn.active, .type-btn:active {
+      background: var(--orange); border-color: var(--orange); color: #fff;
+    }
+    .btn-kakao {
+      width: 100%; background: #FEE500; color: #3C1E1E;
+      border: none; border-radius: 14px; padding: 16px 0;
+      font-size: 15px; font-weight: 700;
+      font-family: 'Noto Sans KR', sans-serif;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      margin-top: 18px;
+      box-shadow: 0 4px 16px rgba(254,229,0,0.5);
+      transition: transform .15s;
+      text-decoration: none;
+    }
+    .btn-kakao:active { transform: scale(.97); }
+    .kakao-logo {
+      width: 22px; height: 22px; background: #3C1E1E;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── FOOTER ── */
+    .footer { padding: 52px 20px 120px; text-align: center; }
+    .footer-logo {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px; font-weight: 900; color: var(--dark); margin-bottom: 8px;
+    }
+    .footer-logo span { color: var(--orange); }
+    .footer-info { font-size: 11px; color: var(--dark-soft); line-height: 1.8; }
+    .footer-divider { width: 40px; height: 2px; background: var(--orange); margin: 16px auto; border-radius: 2px; }
+
+    /* ── FIXED BOTTOM BAR ── */
+    .bottom-bar {
+      position: fixed; bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100%; max-width: 390px;
+      background: var(--white); border-top: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr 1fr;
+      z-index: 1000; box-shadow: 0 -4px 20px rgba(44,44,42,0.08);
+    }
+    .bar-btn {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 4px; padding: 12px 0 calc(12px + env(safe-area-inset-bottom));
+      font-size: 11px; font-weight: 700;
+      text-decoration: none; border: none; cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif; transition: background .15s;
+    }
+    .bar-btn:active { background: rgba(0,0,0,0.04); }
+    .bar-btn i { font-size: 20px; }
+    .bar-call { color: var(--dark); background: transparent; }
+    .bar-kakao { background: #FEE500; color: #3C1E1E; border-left: 1px solid rgba(0,0,0,0.05); }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* hidden card */
+    .card-hidden { display: none !important; }
+
+    /* ── 비밀번호 모달 ── */
+    .pw-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.65); z-index: 3000;
+      align-items: center; justify-content: center;
+    }
+    .pw-overlay.open { display: flex; }
+    .pw-box {
+      background: var(--white); border-radius: 22px;
+      padding: 32px 26px 28px; width: 88%; max-width: 340px;
+      text-align: center; box-shadow: var(--shadow-lg);
+    }
+    .pw-icon { font-size: 36px; margin-bottom: 12px; }
+    .pw-title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 18px; font-weight: 900; margin-bottom: 6px;
+    }
+    .pw-sub { font-size: 12px; color: var(--dark-soft); margin-bottom: 18px; }
+    .pw-input {
+      width: 100%; background: var(--cream);
+      border: 1.5px solid var(--border); border-radius: 12px;
+      padding: 14px; font-size: 16px; text-align: center;
+      letter-spacing: 4px; font-family: 'Noto Sans KR', sans-serif;
+      color: var(--dark); outline: none; margin-bottom: 8px;
+    }
+    .pw-input:focus { border-color: var(--orange); }
+    .pw-err { font-size: 12px; color: #e53e3e; min-height: 18px; margin-bottom: 10px; }
+    .pw-btns { display: flex; gap: 10px; }
+    .pw-cancel {
+      flex: 1; background: var(--cream); border: 1.5px solid var(--border);
+      border-radius: 12px; padding: 13px 0;
+      font-size: 14px; font-weight: 700; color: var(--dark-soft);
+      font-family: 'Noto Sans KR', sans-serif; cursor: pointer;
+    }
+    .pw-confirm {
+      flex: 2; background: var(--orange); border: none;
+      border-radius: 12px; padding: 13px 0;
+      font-size: 14px; font-weight: 700; color: #fff;
+      font-family: 'Noto Sans KR', sans-serif; cursor: pointer;
+    }
+    .pw-change-btn {
+      margin-top: 14px; background: none; border: none;
+      font-size: 11px; color: var(--dark-soft);
+      text-decoration: underline; cursor: pointer;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    /* toast */
+    .toast {
+      position: fixed; bottom: 90px; left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--dark); color: #fff;
+      padding: 10px 20px; border-radius: 30px;
+      font-size: 13px; font-weight: 500;
+      opacity: 0; transition: all .3s; z-index: 3000;
+      white-space: nowrap;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- ① HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-tag"><i class="fas fa-map-marker-alt"></i> JEJU REAL ESTATE</div>
+  <h1>제주방가요,<br><em>행복 20년</em>을 담다.</h1>
+  <p>제주 부동산의 모든 것을 필요에 마춤</p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="https://pf.kakao.com/_fwxmYG" target="_blank"><i class="fas fa-comments"></i> 무료 상담 신청</a>
+    <button class="btn-outline" onclick="tel()"><i class="fas fa-phone"></i> 전화</button>
+  </div>
+  <div class="hero-scroll"><i class="fas fa-chevron-down"></i><span>SCROLL</span></div>
+</section>
+
+<!-- ③ LISTINGS -->
+<div class="listings-wrap">
+  <div class="listings-head">
+    <div class="listings-head-left">
+      <div class="section-eyebrow">PROPERTIES</div>
+      <div class="listings-title-row">
+        <div class="section-title">지금 <em>주목할</em> 제주 매물</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 매물 종류 탭 -->
+  <div class="listing-tabs">
+    <button class="tab-btn active" onclick="filterCards('all', this)">전체</button>
+    <button class="tab-btn" onclick="filterCards('house', this)">🏡 전원주택</button>
+    <button class="tab-btn" onclick="filterCards('land', this)">🌿 토지</button>
+    <button class="tab-btn" onclick="filterCards('apt', this)">🏢 아파트</button>
+    <button class="tab-btn" onclick="filterCards('commercial', this)">🏪 상가</button>
+  </div>
+
+  <div class="swiper listings-swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide" data-type="house">
+        <div class="card fade-up">
+          <div class="card-edit-bar">
+            <button class="card-edit-btn btn-edit" onclick="openCardEdit(this)" title="수정"><i class="fas fa-pencil-alt"></i></button>
+            <button class="card-edit-btn btn-delete" onclick="deleteCard(this)" title="삭제"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="560" height="360"%3E%3Crect width="560" height="360" fill="%23e8e4dc"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23a09a8e"%3E사진을 등록해 주세요%3C/text%3E%3C/svg%3E" alt="전원주택" loading="lazy" />
+            <div class="card-badge house">전원주택</div>
+          </div>
+          <div class="card-body">
+            <div class="card-loc"><i class="fas fa-map-marker-alt"></i> 제주시 한림읍</div>
+            <div class="card-name">마당 넓은 제주 돌집</div>
+            <div class="card-tags">
+              <span class="tag">연면적 142㎡</span><span class="tag">대지 620㎡</span>
+            </div>
+            <div class="card-price">5억 8,000<small>만원</small></div>
+            <button class="card-btn" onclick="openKakao()"><i class="fas fa-arrow-right"></i> 상세보기 · 상담</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-type="land">
+        <div class="card fade-up">
+          <div class="card-edit-bar">
+            <button class="card-edit-btn btn-edit" onclick="openCardEdit(this)" title="수정"><i class="fas fa-pencil-alt"></i></button>
+            <button class="card-edit-btn btn-delete" onclick="deleteCard(this)" title="삭제"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="560" height="360"%3E%3Crect width="560" height="360" fill="%23e8e4dc"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23a09a8e"%3E사진을 등록해 주세요%3C/text%3E%3C/svg%3E" alt="토지" loading="lazy" />
+            <div class="card-badge land">토지</div>
+          </div>
+          <div class="card-body">
+            <div class="card-loc"><i class="fas fa-map-marker-alt"></i> 제주시 애월읍</div>
+            <div class="card-name">오션뷰 감귤밭 매물</div>
+            <div class="card-tags">
+              <span class="tag">2,200㎡</span><span class="tag">계획관리</span><span class="tag">바다뷰</span>
+            </div>
+            <div class="card-price">3억 2,000<small>만원</small></div>
+            <button class="card-btn" onclick="openKakao()"><i class="fas fa-arrow-right"></i> 상세보기 · 상담</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-type="apt">
+        <div class="card fade-up">
+          <div class="card-edit-bar">
+            <button class="card-edit-btn btn-edit" onclick="openCardEdit(this)" title="수정"><i class="fas fa-pencil-alt"></i></button>
+            <button class="card-edit-btn btn-delete" onclick="deleteCard(this)" title="삭제"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="560" height="360"%3E%3Crect width="560" height="360" fill="%23e8e4dc"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23a09a8e"%3E사진을 등록해 주세요%3C/text%3E%3C/svg%3E" alt="아파트" loading="lazy" />
+            <div class="card-badge apt">아파트</div>
+          </div>
+          <div class="card-body">
+            <div class="card-loc"><i class="fas fa-map-marker-alt"></i> 제주시 노형동</div>
+            <div class="card-name">노형 신축 아파트 84㎡</div>
+            <div class="card-tags">
+              <span class="tag">전용 84㎡</span><span class="tag">12층</span><span class="tag">주차 2대</span>
+            </div>
+            <div class="card-price">5억 4,000<small>만원</small></div>
+            <button class="card-btn" onclick="openKakao()"><i class="fas fa-arrow-right"></i> 상세보기 · 상담</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-type="commercial">
+        <div class="card fade-up">
+          <div class="card-edit-bar">
+            <button class="card-edit-btn btn-edit" onclick="openCardEdit(this)" title="수정"><i class="fas fa-pencil-alt"></i></button>
+            <button class="card-edit-btn btn-delete" onclick="deleteCard(this)" title="삭제"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="560" height="360"%3E%3Crect width="560" height="360" fill="%23e8e4dc"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23a09a8e"%3E사진을 등록해 주세요%3C/text%3E%3C/svg%3E" alt="상가" loading="lazy" />
+            <div class="card-badge commercial">상가</div>
+          </div>
+          <div class="card-body">
+            <div class="card-loc"><i class="fas fa-map-marker-alt"></i> 제주시 연동</div>
+            <div class="card-name">신제주 1층 코너 상가</div>
+            <div class="card-tags">
+              <span class="tag">전용 68㎡</span><span class="tag">유동인구 多</span>
+            </div>
+            <div class="card-price">월세 230<small>만원 / 보증 3,000만</small></div>
+            <button class="card-btn" onclick="openKakao()"><i class="fas fa-arrow-right"></i> 상세보기 · 상담</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide" data-type="land">
+        <div class="card fade-up">
+          <div class="card-edit-bar">
+            <button class="card-edit-btn btn-edit" onclick="openCardEdit(this)" title="수정"><i class="fas fa-pencil-alt"></i></button>
+            <button class="card-edit-btn btn-delete" onclick="deleteCard(this)" title="삭제"><i class="fas fa-trash"></i></button>
+          </div>
+          <div class="card-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="560" height="360"%3E%3Crect width="560" height="360" fill="%23e8e4dc"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="18" fill="%23a09a8e"%3E사진을 등록해 주세요%3C/text%3E%3C/svg%3E" alt="토지" loading="lazy" />
+            <div class="card-badge land">전원주택지</div>
+          </div>
+          <div class="card-body">
+            <div class="card-loc"><i class="fas fa-map-marker-alt"></i> 서귀포시 안덕면</div>
+            <div class="card-name">한라산뷰 전원주택 부지</div>
+            <div class="card-tags">
+              <span class="tag">1,650㎡</span><span class="tag">산록도로 인접</span>
+            </div>
+            <div class="card-price">2억 1,500<small>만원</small></div>
+            <button class="card-btn" onclick="openKakao()"><i class="fas fa-arrow-right"></i> 상세보기 · 상담</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<!-- ⑤ VIDEO -->
+<div class="video-wrap section fade-up">
+  <div class="video-section-head">
+    <div>
+      <div class="section-eyebrow">PROPERTY TOUR</div>
+      <div class="section-title"><em>유튜브 영상</em> 확인</div>
+    </div>
+    <div class="video-edit-btns">
+      <button class="icon-btn" onclick="openVideoModal()" title="영상 수정"><i class="fas fa-pencil-alt"></i></button>
+      <button class="icon-btn del" onclick="deleteVideo()" title="영상 삭제"><i class="fas fa-trash"></i></button>
+    </div>
+  </div>
+  <div class="video-frame" id="videoFrame">
+    <iframe
+      id="videoIframe"
+      src="https://www.youtube.com/embed/3rCGIRnevPc?rel=0&modestbranding=1"
+      title="제주 매물 현장 영상"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="video-cap" id="videoCap"><i class="fas fa-video"></i> 애월읍 오션뷰 감귤밭 현장 투어</div>
+</div>
+
+<!-- ⑥ FORM -->
+<div id="form" class="form-wrap section">
+  <div class="section-head fade-up">
+    <div class="section-eyebrow">CONSULTATION</div>
+    <div class="section-title">지금 바로<br><em>무료 상담</em> 신청</div>
+  </div>
+  <div class="form-box fade-up">
+    <div class="form-group">
+      <label class="form-label">이름</label>
+      <input class="form-input" type="text" placeholder="홍길동" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">연락처</label>
+      <input class="form-input" type="tel" placeholder="010-0000-0000" />
+    </div>
+    <div class="form-group">
+      <label class="form-label">관심 매물 유형</label>
+      <div class="form-types">
+        <button class="type-btn active" onclick="selectType(this)">🏡 전원주택</button>
+        <button class="type-btn" onclick="selectType(this)">🌿 토지·과수원 등</button>
+        <button class="type-btn" onclick="selectType(this)">🏢 아파트</button>
+        <button class="type-btn" onclick="selectType(this)">🏪 상가·건물</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">문의 내용</label>
+      <textarea class="form-textarea" placeholder="예산, 희망 지역, 목적 등 자유롭게 적어주세요."></textarea>
+    </div>
+    <a class="btn-kakao" href="https://pf.kakao.com/_fwxmYG" target="_blank">
+      <div class="kakao-logo">
+        <svg viewBox="0 0 18 18" fill="#FEE500" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 1C4.03 1 0 4.13 0 8c0 2.4 1.56 4.52 3.95 5.76L3 17l4.22-2.23C7.78 14.91 8.38 15 9 15c4.97 0 9-3.13 9-7s-4.03-7-9-7z" fill="#FEE500"/>
+        </svg>
+      </div>
+      카카오톡으로 상담 신청하기
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">제주부동산나라<span>공인중개사</span></div>
+  <div class="footer-divider"></div>
+  <div class="footer-info">
+    대 표 &nbsp; 강창주<br>
+    등록번호 &nbsp; 가 - 4402 - 950<br>
+    <br>
+    © 2025 제주부동산나라공인중개사. All rights reserved.
+  </div>
+  <div style="margin-top:20px">
+    <button onclick="resetAll()" style="background:none;border:1px solid rgba(44,44,42,0.2);border-radius:20px;padding:6px 16px;font-size:11px;color:var(--dark-soft);font-family:'Noto Sans KR',sans-serif;cursor:pointer;">🔄 원본으로 되돌리기</button>
+  </div>
+</footer>
+
+<!-- ⑦ FIXED BOTTOM BAR -->
+<div class="bottom-bar">
+  <button class="bar-btn bar-call" onclick="tel()">
+    <i class="fas fa-phone-alt"></i>
+    전화 상담
+  </button>
+  <button class="bar-btn bar-kakao" onclick="openKakao()">
+    <i class="fas fa-comment-dots"></i>
+    카카오 상담
+  </button>
+</div>
+
+<!-- 영상 수정 모달 -->
+<div class="modal-overlay" id="videoModal">
+  <div class="modal-box">
+    <div class="modal-title">유튜브 영상 수정</div>
+    <div class="modal-sub">유튜브 영상 URL 또는 embed URL을 입력하세요</div>
+    <input class="modal-input" id="videoUrlInput" type="text" placeholder="https://www.youtube.com/watch?v=..." />
+    <input class="modal-input" id="videoCapInput" type="text" placeholder="영상 설명 (예: 애월읍 현장 투어)" />
+    <div class="modal-btns">
+      <button class="modal-cancel" onclick="closeVideoModal()">취소</button>
+      <button class="modal-confirm" onclick="applyVideo()">적용하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 매물 카드 편집 모달 -->
+<div class="card-modal-overlay" id="cardModal">
+  <div class="card-modal-box">
+    <div class="modal-title" style="margin-bottom:4px">매물 카드 수정</div>
+    <div class="modal-sub">내용을 수정 후 저장하세요</div>
+    <div class="cmi">
+      <label>매물 종류</label>
+      <select id="cm-type">
+        <option value="house">🏡 전원주택</option>
+        <option value="land">🌿 토지</option>
+        <option value="apt">🏢 아파트</option>
+        <option value="commercial">🏪 상가</option>
+      </select>
+    </div>
+    <div class="cmi">
+      <label>사진 교체</label>
+      <button type="button" onclick="document.getElementById('cm-img-file').click()" style="width:100%;background:var(--orange);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;font-family:'Noto Sans KR',sans-serif;cursor:pointer;margin-bottom:8px;">
+        📷 새 사진으로 교체
+      </button>
+      <input type="file" accept="image/*" id="cm-img-file" style="display:none" onchange="previewCardImg(this)" />
+      <input id="cm-img-url" type="text" placeholder="또는 사진 URL 붙여넣기" style="width:100%;background:var(--cream);border:1.5px solid var(--border);border-radius:10px;padding:11px 13px;font-size:13px;font-family:'Noto Sans KR',sans-serif;color:var(--dark);outline:none;" />
+      <div id="cm-img-preview" style="margin-top:10px;display:none;">
+        <img id="cm-preview-img" src="" style="width:100%;height:140px;object-fit:cover;border-radius:10px;border:2px solid var(--orange);" />
+        <div style="font-size:12px;color:var(--orange);margin-top:5px;text-align:center;font-weight:700;">✓ 새 사진 선택됨 — 저장하기를 누르면 적용됩니다</div>
+      </div>
+    </div>
+    <div class="cmi"><label>지역</label><input id="cm-loc" type="text" placeholder="예: 제주시 애월읍" /></div>
+    <div class="cmi"><label>매물명</label><input id="cm-name" type="text" placeholder="예: 오션뷰 감귤밭" /></div>
+    <div class="cmi"><label>태그 (쉼표로 구분)</label><input id="cm-tags" type="text" placeholder="예: 2,200㎡, 바다뷰" /></div>
+    <div class="cmi"><label>가격</label><input id="cm-price" type="text" placeholder="예: 3억 2,000" /></div>
+    <div style="display:flex;gap:10px;margin-top:6px">
+      <button class="modal-cancel" onclick="closeCardModal()">취소</button>
+      <button class="modal-confirm" onclick="applyCardEdit()">저장하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- 비밀번호 확인 모달 -->
+<div class="pw-overlay" id="pwModal">
+  <div class="pw-box">
+    <div class="pw-icon">🔐</div>
+    <div class="pw-title">관리자 확인</div>
+    <div class="pw-sub">매물 편집은 관리자만 가능합니다</div>
+    <input class="pw-input" id="pwInput" type="password" placeholder="비밀번호 입력" maxlength="20"
+      onkeydown="if(event.key==='Enter') checkPw()" autocomplete="off" />
+    <div class="pw-err" id="pwErr"></div>
+    <div class="pw-btns">
+      <button class="pw-cancel" onclick="closePwModal()">취소</button>
+      <button class="pw-confirm" onclick="checkPw()">확인</button>
+    </div>
+    <button class="pw-change-btn" onclick="changePwMode()">비밀번호 변경</button>
+  </div>
+</div>
+
+<!-- 비밀번호 변경 모달 -->
+<div class="pw-overlay" id="pwChangeModal">
+  <div class="pw-box">
+    <div class="pw-icon">🔑</div>
+    <div class="pw-title">비밀번호 변경</div>
+    <div class="pw-sub" style="margin-bottom:14px">현재 비밀번호를 입력하세요</div>
+    <input class="pw-input" id="pwOld" type="password" placeholder="현재 비밀번호" maxlength="20" autocomplete="off" style="margin-bottom:10px;letter-spacing:4px" />
+    <input class="pw-input" id="pwNew1" type="password" placeholder="새 비밀번호" maxlength="20" autocomplete="off" style="margin-bottom:10px;letter-spacing:4px" />
+    <input class="pw-input" id="pwNew2" type="password" placeholder="새 비밀번호 확인" maxlength="20" autocomplete="off"
+      onkeydown="if(event.key==='Enter') doChangePw()" style="letter-spacing:4px" />
+    <div class="pw-err" id="pwChangeErr"></div>
+    <div class="pw-btns">
+      <button class="pw-cancel" onclick="closePwChangeModal()">취소</button>
+      <button class="pw-confirm" onclick="doChangePw()">변경하기</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  /* ═══════════════════════════════════════════
+     💾 localStorage 저장/복원 시스템
+     새로고침해도 수정 내용이 유지됩니다
+  ═══════════════════════════════════════════ */
+  const STORAGE_KEY = 'jejuRealEstate_v1';
+
+  /* 현재 페이지 상태를 저장 */
+  function saveState() {
+    const state = {};
+
+    /* 매물 카드 저장 */
+    const cards = [];
+    document.querySelectorAll('.swiper-wrapper .swiper-slide').forEach((slide, i) => {
+      const card = slide.querySelector('.card');
+      if (!card) return;
+      const thumbImg = card.querySelector('.card-thumb img');
+      const badge = card.querySelector('.card-badge');
+      const loc = card.querySelector('.card-loc');
+      const name = card.querySelector('.card-name');
+      const tags = Array.from(card.querySelectorAll('.tag')).map(t => t.textContent.trim());
+      const priceEl = card.querySelector('.card-price');
+      // 가격: small 태그 제외한 텍스트만
+      const priceText = Array.from(priceEl.childNodes)
+        .filter(n => n.nodeType === Node.TEXT_NODE)
+        .map(n => n.textContent.trim()).join('');
+      const smallText = priceEl.querySelector('small') ? priceEl.querySelector('small').textContent : '만원';
+
+      cards.push({
+        type: slide.dataset.type || 'house',
+        imgSrc: (thumbImg && thumbImg.src && thumbImg.src.startsWith('data:')) ? thumbImg.src : (thumbImg && thumbImg.src && !thumbImg.src.includes('picsum.photos') ? thumbImg.src : ''),
+        badgeText: badge ? badge.textContent : '',
+        badgeClass: badge ? badge.className : '',
+        loc: loc ? loc.querySelector('i') ? loc.textContent.trim() : loc.textContent.trim() : '',
+        name: name ? name.textContent.trim() : '',
+        tags: tags,
+        price: priceText,
+        priceSmall: smallText,
+        deleted: false
+      });
+    });
+    state.cards = cards;
+
+    /* 삭제된 슬라이드 인덱스 — 이미 DOM에서 제거됐으므로 cards 배열 길이로 대응 */
+
+    /* 영상 저장 */
+    const videoWrap = document.querySelector('.video-wrap');
+    state.videoDeleted = !videoWrap || !document.body.contains(videoWrap);
+    if (!state.videoDeleted) {
+      const iframe = document.getElementById('videoIframe');
+      const cap = document.getElementById('videoCap');
+      state.videoSrc = iframe ? iframe.src : '';
+      state.videoCap = cap ? cap.textContent.trim() : '';
+    }
+
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch(e) {
+      /* 용량 초과 시 — 이미지 모두 제거 후 재시도 */
+      cards.forEach(c => { c.imgSrc = ''; });
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        showToast('⚠️ 사진 용량이 커서 정보만 저장됐습니다');
+      } catch(e2) {
+        showToast('❌ 저장 실패 — 브라우저 저장공간을 확인하세요');
+      }
+    }
+  }
+
+  /* 저장된 상태를 페이지에 복원 */
+  function restoreState() {
+    let state;
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      state = JSON.parse(raw);
+    } catch(e) { return; }
+
+    /* 매물 카드 복원 */
+    if (state.cards && state.cards.length) {
+      const slides = document.querySelectorAll('.swiper-wrapper .swiper-slide');
+      const toRemove = [];
+
+      /* 기존 슬라이드 수가 저장된 카드 수보다 많으면 삭제된 것들 제거 */
+      if (slides.length > state.cards.length) {
+        for (let i = state.cards.length; i < slides.length; i++) toRemove.push(slides[i]);
+        toRemove.forEach(s => s.remove());
+      }
+
+      /* 남은 슬라이드에 저장된 데이터 적용 */
+      const remainSlides = document.querySelectorAll('.swiper-wrapper .swiper-slide');
+      state.cards.forEach((data, i) => {
+        const slide = remainSlides[i];
+        if (!slide) return;
+        const card = slide.querySelector('.card');
+        if (!card) return;
+
+        slide.dataset.type = data.type;
+
+        const thumbImg = card.querySelector('.card-thumb img');
+        if (thumbImg && data.imgSrc) thumbImg.src = data.imgSrc;
+        /* imgSrc 없으면 기존 사진 유지 */
+
+        const badge = card.querySelector('.card-badge');
+        if (badge) { badge.textContent = data.badgeText; badge.className = data.badgeClass; }
+
+        const loc = card.querySelector('.card-loc');
+        if (loc) loc.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.loc}`;
+
+        const name = card.querySelector('.card-name');
+        if (name) name.textContent = data.name;
+
+        const tagsEl = card.querySelector('.card-tags');
+        if (tagsEl) tagsEl.innerHTML = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+        const priceEl = card.querySelector('.card-price');
+        if (priceEl) priceEl.innerHTML = `${data.price}<small>${data.priceSmall}</small>`;
+      });
+    }
+
+    /* 영상 복원 */
+    if (state.videoDeleted) {
+      const vw = document.querySelector('.video-wrap');
+      if (vw) vw.remove();
+    } else if (state.videoSrc) {
+      const frame = document.getElementById('videoFrame');
+      if (frame) {
+        frame.innerHTML = `<iframe id="videoIframe" src="${state.videoSrc}" title="제주 매물 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      }
+      const cap = document.getElementById('videoCap');
+      if (cap && state.videoCap) cap.innerHTML = `<i class="fas fa-video"></i> ${state.videoCap}`;
+    }
+  }
+
+  /* ═══════════════════════════════════════════
+     🔐 비밀번호 시스템
+  ═══════════════════════════════════════════ */
+  const PW_KEY = 'jejuAdmin_pw';
+  const DEFAULT_PW = '1234'; /* ← 초기 비밀번호 */
+  let _pwCallback = null; /* 인증 후 실행할 함수 */
+
+  function getAdminPw() {
+    return localStorage.getItem(PW_KEY) || DEFAULT_PW;
+  }
+
+  /* 비밀번호 확인 후 callback 실행 */
+  function requirePw(callback) {
+    _pwCallback = callback;
+    document.getElementById('pwInput').value = '';
+    document.getElementById('pwErr').textContent = '';
+    document.getElementById('pwModal').classList.add('open');
+    setTimeout(() => document.getElementById('pwInput').focus(), 100);
+  }
+
+  function checkPw() {
+    const val = document.getElementById('pwInput').value;
+    if (val === getAdminPw()) {
+      document.getElementById('pwModal').classList.remove('open');
+      if (_pwCallback) { _pwCallback(); _pwCallback = null; }
+    } else {
+      document.getElementById('pwErr').textContent = '❌ 비밀번호가 틀렸습니다';
+      document.getElementById('pwInput').value = '';
+      document.getElementById('pwInput').focus();
+    }
+  }
+
+  function closePwModal() {
+    document.getElementById('pwModal').classList.remove('open');
+    _pwCallback = null;
+  }
+
+  function changePwMode() {
+    document.getElementById('pwModal').classList.remove('open');
+    document.getElementById('pwOld').value = '';
+    document.getElementById('pwNew1').value = '';
+    document.getElementById('pwNew2').value = '';
+    document.getElementById('pwChangeErr').textContent = '';
+    document.getElementById('pwChangeModal').classList.add('open');
+    setTimeout(() => document.getElementById('pwOld').focus(), 100);
+  }
+
+  function closePwChangeModal() {
+    document.getElementById('pwChangeModal').classList.remove('open');
+  }
+
+  function doChangePw() {
+    const old  = document.getElementById('pwOld').value;
+    const new1 = document.getElementById('pwNew1').value;
+    const new2 = document.getElementById('pwNew2').value;
+    if (old !== getAdminPw()) {
+      document.getElementById('pwChangeErr').textContent = '❌ 현재 비밀번호가 틀렸습니다';
+      return;
+    }
+    if (new1.length < 4) {
+      document.getElementById('pwChangeErr').textContent = '❌ 비밀번호는 4자 이상이어야 합니다';
+      return;
+    }
+    if (new1 !== new2) {
+      document.getElementById('pwChangeErr').textContent = '❌ 새 비밀번호가 일치하지 않습니다';
+      return;
+    }
+    localStorage.setItem(PW_KEY, new1);
+    closePwChangeModal();
+    showToast('비밀번호가 변경되었습니다 ✓');
+  }
+
+  /* 모달 바깥 클릭 닫기 */
+  document.getElementById('pwModal').addEventListener('click', function(e) {
+    if (e.target === this) closePwModal();
+  });
+  document.getElementById('pwChangeModal').addEventListener('click', function(e) {
+    if (e.target === this) closePwChangeModal();
+  });
+
+  /* ── Swiper ── */
+  const swiper = new Swiper('.listings-swiper', {
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    grabCursor: true,
+  });
+
+  /* ── Scroll animations ── */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  /* ── Type select (form) ── */
+  function selectType(btn) {
+    document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  /* ── Tab filter ── */
+  function filterCards(type, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      if (type === 'all' || slide.dataset.type === type) {
+        slide.style.display = '';
+      } else {
+        slide.style.display = 'none';
+      }
+    });
+    swiper.update();
+  }
+
+  /* ── Scroll to ── */
+  function scrollTo(id) {
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ── Actions ── */
+  function tel() { window.location.href = 'tel:01062628955'; }
+  function openKakao() { window.open('https://pf.kakao.com/_fwxmYG', '_blank'); }
+
+  /* ── Toast ── */
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  /* ── 페이지 로드 시 복원 ── */
+  restoreState();
+
+  /* ── 카드 삭제 (비번 필요) ── */
+  function deleteCard(btn) {
+    requirePw(() => {
+      if (!confirm('이 매물 카드를 삭제할까요?')) return;
+      const slide = btn.closest('.swiper-slide');
+      slide.remove();
+      swiper.update();
+      saveState();
+      showToast('매물이 삭제되었습니다');
+    });
+  }
+
+  /* ── 카드 편집 (비번 필요) ── */
+  let currentCard = null;
+  function openCardEdit(btn) {
+    requirePw(() => {
+      currentCard = btn.closest('.card');
+      _pendingImgBase64 = null;
+      const slide = currentCard.closest('.swiper-slide');
+      document.getElementById('cm-type').value = slide.dataset.type || 'house';
+      document.getElementById('cm-img-url').value = '';
+      document.getElementById('cm-img-preview').style.display = 'none';
+      document.getElementById('cm-preview-img').src = '';
+      document.getElementById('cm-loc').value = currentCard.querySelector('.card-loc').textContent.trim();
+      document.getElementById('cm-name').value = currentCard.querySelector('.card-name').textContent.trim();
+      const tags = Array.from(currentCard.querySelectorAll('.tag')).map(t => t.textContent.trim()).join(', ');
+      document.getElementById('cm-tags').value = tags;
+      document.getElementById('cm-price').value = currentCard.querySelector('.card-price').childNodes[0].textContent.trim();
+      document.getElementById('cardModal').classList.add('open');
+    });
+  }
+  function closeCardModal() {
+    document.getElementById('cardModal').classList.remove('open');
+    currentCard = null;
+    _pendingImgBase64 = null;
+  }
+  let _pendingImgBase64 = null; /* 선택된 사진 압축 base64 임시 보관 */
+
+  function previewCardImg(input) {
+    if (!input.files || !input.files[0]) return;
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const img = new Image();
+      img.onload = function() {
+        /* Canvas로 압축 — 최대 600px, JPEG 품질 0.65 → 약 30~80KB */
+        const MAX = 600;
+        let w = img.width, h = img.height;
+        if (w > MAX || h > MAX) {
+          if (w > h) { h = Math.round(h * MAX / w); w = MAX; }
+          else       { w = Math.round(w * MAX / h); h = MAX; }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        const compressed = canvas.toDataURL('image/jpeg', 0.65);
+        _pendingImgBase64 = compressed;
+        document.getElementById('cm-preview-img').src = compressed;
+        document.getElementById('cm-img-preview').style.display = 'block';
+        document.getElementById('cm-img-url').value = '';
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function applyCardEdit() {
+    if (!currentCard) return;
+    const type = document.getElementById('cm-type').value;
+    const loc  = document.getElementById('cm-loc').value;
+    const name = document.getElementById('cm-name').value;
+    const tags = document.getElementById('cm-tags').value.split(',').map(s => s.trim()).filter(Boolean);
+    const price= document.getElementById('cm-price').value;
+
+    const imgUrl = document.getElementById('cm-img-url').value.trim();
+    const thumbImg = currentCard.querySelector('.card-thumb img');
+
+    if (_pendingImgBase64) {
+      thumbImg.src = _pendingImgBase64; /* ✅ 내 사진 (base64) 적용 */
+    } else if (imgUrl) {
+      thumbImg.src = imgUrl;            /* ✅ URL 입력 적용 */
+    }
+
+    const slide = currentCard.closest('.swiper-slide');
+    slide.dataset.type = type;
+
+    const badgeMap = { house:'전원주택', land:'토지', apt:'아파트', commercial:'상가' };
+    const badge = currentCard.querySelector('.card-badge');
+    badge.textContent = badgeMap[type];
+    badge.className = 'card-badge ' + type;
+
+    currentCard.querySelector('.card-loc').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${loc}`;
+    currentCard.querySelector('.card-name').textContent = name;
+    const tagsEl = currentCard.querySelector('.card-tags');
+    tagsEl.innerHTML = tags.map(t => `<span class="tag">${t}</span>`).join('');
+    currentCard.querySelector('.card-price').innerHTML = `${price}<small>만원</small>`;
+
+    closeCardModal();
+    saveState(); /* 💾 저장 */
+    showToast('매물이 수정되었습니다 ✓');
+  }
+
+  /* ── 영상 수정 (비번 필요) ── */
+  function openVideoModal() {
+    requirePw(() => {
+      const iframe = document.getElementById('videoIframe');
+      document.getElementById('videoUrlInput').value = iframe ? iframe.src : '';
+      document.getElementById('videoCapInput').value = document.getElementById('videoCap').textContent.trim();
+      document.getElementById('videoModal').classList.add('open');
+    });
+  }
+  function closeVideoModal() { document.getElementById('videoModal').classList.remove('open'); }
+  function applyVideo() {
+    let url = document.getElementById('videoUrlInput').value.trim();
+    const cap = document.getElementById('videoCapInput').value.trim();
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\s]+)/);
+    if (match) url = `https://www.youtube.com/embed/${match[1]}?rel=0&modestbranding=1`;
+    const frame = document.getElementById('videoFrame');
+    frame.innerHTML = `<iframe id="videoIframe" src="${url}" title="제주 매물 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    document.getElementById('videoCap').innerHTML = `<i class="fas fa-video"></i> ${cap}`;
+    closeVideoModal();
+    saveState();
+    showToast('영상이 업데이트되었습니다 ✓');
+  }
+  function deleteVideo() {
+    requirePw(() => {
+      if (!confirm('영상 섹션을 삭제할까요?')) return;
+      document.querySelector('.video-wrap').remove();
+      saveState();
+      showToast('영상이 삭제되었습니다');
+    });
+  }
+
+  /* ── 초기화 버튼 (원본으로 되돌리기) ── */
+  function resetAll() {
+    if (!confirm('모든 수정 내용을 삭제하고 원본으로 되돌릴까요?')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    location.reload();
+  }
+
+  /* 모달 오버레이 클릭 닫기 */
+  document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) closeVideoModal();
+  });
+  document.getElementById('cardModal').addEventListener('click', function(e) {
+    if (e.target === this) closeCardModal();
+  });
+</script>
+</body>
+</html>
